@@ -38,7 +38,13 @@ p {
     cursor: pointer;
     background-color: lightblue;
     transition: all .4s ease;
+    border: 1px solid lightblue;
 }
+
+.bar:hover {
+    background-color: white;
+}
+
 
 input[name="r"] {
     position: absolute;
@@ -49,7 +55,6 @@ input[name="r"] {
     width: 400%;
     height: 100%;
     display: flex;
-    
 }
 
 .slide {
@@ -78,10 +83,42 @@ input[name="r"] {
     margin-left: -75%;
 }
 
+#r1:checked+#r2+#r3+#r4+.navigation>label:nth-child(1) {
+    background-color: transparent;
+    transition: .3s;
+}
+
+#r2:checked+#r3+#r4+.navigation>label:nth-child(2) {
+    background-color: transparent;
+    transition: .3s;
+}
+
+#r3:checked+#r3+#r4+.navigation>label:nth-child(3) {
+    background-color: transparent;
+    transition: .3s;
+}
+
+#r4:checked+.navigation>label:nth-child(4) {
+    background-color: transparent;
+    transition: .3s;
+}
+
 .container {
     width: 1100px;
     margin: auto;
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
+    
+}
+
+.text {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+}
+
+.textovit {
+    width: 25%;
+    transition: all .6s ease;
 }
